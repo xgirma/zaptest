@@ -1,7 +1,7 @@
 exports.config = {
 
     specs: [
-        '*.spec.js'
+        '../specs/*.spec.js'
     ],
 
     capabilities: {
