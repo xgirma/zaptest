@@ -1,10 +1,10 @@
 module.exports = {
     url:{
-        home: 'http://localhost:8080/bodgeit/home.jsp',
-        about: 'http://localhost:8080/bodgeit/about.jsp',
-        contact: 'http://localhost:8080/bodgeit/contact.jsp',
-        login: 'http://localhost:8080/bodgeit/login.jsp',
-        basket: 'http://localhost:8080/bodgeit/basket.jsp',
-        search: 'http://localhost:8080/bodgeit/search.jsp'
+        home: browser.baseUrl + 'home.jsp',
+        about: browser.baseUrl + 'about.jsp',
+        contact: browser.baseUrl + 'contact.jsp',
+        login: browser.baseUrl + 'login.jsp',
+        basket: browser.baseUrl + 'basket.jsp',
+        search: browser.baseUrl + 'search.jsp'
     }
 };
