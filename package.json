@@ -4,7 +4,7 @@
   "description": "testing zap with protractor",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/protractor/bin/ protractor config.js"
+    "test": "TODO"
   },
   "repository": {
     "type": "git",

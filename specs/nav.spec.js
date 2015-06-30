@@ -3,7 +3,7 @@ describe('Navigate to the six main pages', function(){
         Const;
 
     beforeAll(function(){
-        browser.get(browser.baseUrl);
+        browser.get('http://localhost:8080/bodgeit/');
         NavPage = require('../page_objects/common/nav.bar.js');
         Const = require('../helpers/const.js');
     });

@@ -5,7 +5,7 @@ exports.config = {
     ],
 
     capabilities: {
-        browserName: 'chrome',
+        browserName: 'firefox',
         'proxy': {
             proxyType: 'manual',
             httpProxy: 'localhost:8090',
