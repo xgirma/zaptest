@@ -4,6 +4,10 @@ exports.config = {
         '../specs/*.spec.js'
     ],
 
+    exclude: [
+        '../specs/nav.spec.js'
+    ],
+
     capabilities: {
         browserName: 'firefox',
         'proxy': {
@@ -20,7 +24,7 @@ exports.config = {
     allScriptsTimeout: 11000,
     getPageTimeout: 10000,
 
-    onPrepare: function() {
+    onPrepare: function () {
         browser.ignoreSynchronization = true;
 
         var SpecReporter = require('jasmine-spec-reporter');

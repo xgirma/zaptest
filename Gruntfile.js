@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 
         protractor: {
             options: {
-                configFile: "node_modules/protractor/example/conf.js", // Default config file
+                configFile: "node_modules/protractor/example/conf.js",
                 keepAlive: true,
                 noColor: false,
                 args: {}
@@ -46,21 +46,19 @@ module.exports = function (grunt) {
             options: {
                 port: 8090
             }
-        },
-
-
+        }
     });
 
     grunt.loadNpmTasks('grunt-zaproxy');
     grunt.loadNpmTasks('grunt-protractor-runner');
 
-    grunt.registerTask('zap', [
+    grunt.registerTask('default', [
         'zap_start',//,
         'protractor',
         //'zap_spider',
         //'zap_scan',
         //'zap_alert',
-        'zap_report',
+        //'zap_report',
         'zap_stop'
     ]);
 };

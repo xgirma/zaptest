@@ -4,48 +4,64 @@ module.exports = {
             return $('a[href="home.jsp"]');
         },
 
-        lnkAbout: function(){
+        lnkAbout: function () {
             return $('a[href="about.jsp"]');
         },
 
-        lnkContact: function(){
+        lnkContact: function () {
             return $('a[href="contact.jsp"]');
         },
 
-        lnkLogin: function(){
+        lnkLogin: function () {
             return $('a[href="login.jsp"]');
         },
 
-        lnkBasket: function(){
+        lnkLogout: function(){
+            return $('a[href="logout.jsp"]');
+        },
+
+        lnkBasket: function () {
             return $('a[href="basket.jsp"]');
         },
 
-        lnkSearch: function(){
+        lnkSearch: function () {
             return $('a[href="search.jsp"]');
         }
     },
 
-    navToHome: function(){
+    navToHome: function () {
         this.webEl.lnkHome().click();
     },
 
-    navToAbout: function(){
+    navToAbout: function () {
         return this.webEl.lnkAbout().click();
     },
 
-    navToContact: function(){
+    navToContact: function () {
         return this.webEl.lnkContact().click();
     },
 
-    navToLogin: function(){
+    navToLogin: function () {
         return this.webEl.lnkLogin().click();
     },
 
-    navToBasket: function(){
+    navToLogout: function(){
+        return this.webEl.lnkLogout().click();
+    },
+
+    navToBasket: function () {
         return this.webEl.lnkBasket().click();
     },
 
-    navToSearch: function(){
+    navToSearch: function () {
         return this.webEl.lnkSearch().click();
+    },
+
+    isLogoutShown: function(){
+        return this.webEl.lnkLogout().isDisplayed();
+    },
+
+    isLoginShown: function(){
+        return this.webEl.lnkLogin().isDisplayed();
     }
 };
