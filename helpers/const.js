@@ -18,7 +18,7 @@ module.exports = {
     },
 
     password:{
-        test: 'password',
+        guess: 'password',
         whatever: 'whatever'
     },
 
