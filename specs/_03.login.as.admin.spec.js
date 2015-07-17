@@ -1,4 +1,4 @@
-describe('02. Login as user1@thebodgeitstore.com', function () {
+describe('02. Login as admin@thebodgeitstore.com', function () {
     var homePage,
         loginPage,
         aboutPage,
@@ -23,7 +23,7 @@ describe('02. Login as user1@thebodgeitstore.com', function () {
         });
 
         it('should login using "password" as password"', function(){
-            loginPage.enterUsername('user1');
+            loginPage.enterUsername('');
             loginPage.enterPassword(common.password.whatever);
             loginPage.clickLogin();
             expect(loginPage.isLoginSucceed()).toBe(true);
@@ -33,8 +33,8 @@ describe('02. Login as user1@thebodgeitstore.com', function () {
             expect(navBar.isLogoutShown()).toBe(true);
         });
 
-        it('should have "user1@thebodgeitstore.com" as user', function(){
-            expect(loginPage.getUsername()).toEqual(common.username.user);
+        it('should have "admin@thebodgeitstore.com" as user', function(){
+            expect(loginPage.getUsername()).toEqual(common.username.admin);
         });
 
         it('challenge should be done', function(){
