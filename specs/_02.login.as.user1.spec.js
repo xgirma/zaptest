@@ -1,4 +1,4 @@
-describe('01. Login as test@thebodgeitstore.com', function () {
+describe('02. Login as user1@thebodgeitstore.com', function () {
     var homePage,
         loginPage,
         aboutPage,
@@ -16,15 +16,15 @@ describe('01. Login as test@thebodgeitstore.com', function () {
         browser.get(browser.baseUrl + 'home.jsp');
     });
 
-    describe('Login by trying predictable password', function(){
+    describe('Login using sql injection attack', function(){
         it('Navigate to the login page', function () {
             navBar.navToLogin();
             expect(browser.getCurrentUrl()).toEqual(common.url.login);
         });
 
         it('should login using "password" as password"', function(){
-            loginPage.enterUsername(common.username.test);
-            loginPage.enterPassword(common.password.guess);
+            loginPage.enterUsername('user1');
+            loginPage.enterPassword(common.password.whatever);
             loginPage.clickLogin();
             expect(loginPage.isLoginSucceed()).toBe(true);
         });
@@ -34,36 +34,7 @@ describe('01. Login as test@thebodgeitstore.com', function () {
         });
 
         it('should have "test@thebodgeitstore.com" as user', function(){
-            expect(loginPage.getUsername()).toEqual(common.username.test);
-        });
-
-        it('challenge should be done', function(){
-            navBar.navToAbout();
-            aboutPage.clickScoring();
-            expect(scorePage.isChallenge01Completed()).toBe(common.challenge.completed);
-        });
-
-        it('should logout', function(){
-            navBar.navToLogout();
-            expect(browser.getCurrentUrl()).toEqual(common.url.logout);
-        });
-    });
-
-    describe('Login using sql injection attack', function(){
-        it('should be on login page', function(){
-            navBar.navToLogin();
-            expect(browser.getCurrentUrl()).toEqual(common.url.login);
-        });
-
-        it('should login using sql-injection', function(){
-            loginPage.enterUsername('test');
-            loginPage.enterPassword(common.password.whatever);
-            loginPage.clickLogin();
-            expect(navBar.isLogoutShown()).toBe(true);
-        });
-
-        it('should have "test@thebodgeitstore.com" as user', function(){
-            expect(loginPage.getUsername()).toEqual(common.username.test);
+            expect(loginPage.getUsername()).toEqual(common.username.user);
         });
 
         it('challenge should be done', function(){

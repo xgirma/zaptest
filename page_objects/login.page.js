@@ -29,10 +29,24 @@ module.exports = {
         var el = this.webElements.txtUsername();
         el.clear();
 
-        if (name === 'sql') {
-            el.sendKeys("test@thebodgeitstore.com' or '1'='1");
-        } else {
-            el.sendKeys(String(name));
+        switch(name) {
+            case 'test' || 'test@thebodgeitstore.com':
+                el.sendKeys("test@thebodgeitstore.com' or '1'='1");
+                break;
+            case 'test@thebodgeitstore.com':
+                el.sendKeys("test@thebodgeitstore.com");
+                break;
+            case 'user1':
+                el.sendKeys("user1@thebodgeitstore.com' or '1'='1");
+                break;
+            case 'user1@thebodgeitstore.com':
+                el.sendKeys("user1@thebodgeitstore.com");
+                break;
+            case 'admin@thebodgeitstore.com':
+                el.sendKeys("admin@thebodgeitstore.com");
+                break;
+            default:
+                el.sendKeys("admin@thebodgeitstore.com' or '1'='1");
         }
     },
 
