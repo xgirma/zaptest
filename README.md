@@ -7,8 +7,8 @@ The "The BodgeIt Store" sample application is used [https://github.com/psiinon/b
 |No   |    Challenge                                                                                    |  Completed    |
 |-----|-------------------------------------------------------------------------------------------------|---------------|
 |01.  |    Login as test@thebodgeitstore.com 	                                                        | Yes            |
-|02.  |    Login as user1@thebodgeitstore.com 	                                                        | No            |
-|03.  |    Login as admin@thebodgeitstore.com 	                                                        | No            |
+|02.  |    Login as user1@thebodgeitstore.com 	                                                        | Yes            |
+|03.  |    Login as admin@thebodgeitstore.com 	                                                        | Yes            |
 |04.  |    Find hidden content as a non admin user 	                                                    | No            |
 |05.  |    Find diagnostic data 	                                                                    | No            |
 |06.  |    Level 1: Display a popup using: <script>alert("XSS")</script>.                               | No            |
