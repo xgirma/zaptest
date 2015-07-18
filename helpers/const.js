@@ -24,6 +24,6 @@ module.exports = {
 
     challenge: {
         completed: 'Completed',
-        notCompleted: 'Not Completed'
+        notCompleted: 'Not completed'
     }
 };

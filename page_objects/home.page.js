@@ -12,7 +12,7 @@ module.exports = {
     },
 
     navToViewSelectionSource: function(){
-        var i = 0, len = 4;
+        var i = 0, len = 5;
         for (; i < len; ) {
             browser.actions().sendKeys(protractor.Key.ARROW_DOWN).perform();
             i++;
@@ -21,5 +21,9 @@ module.exports = {
 
     clickViewSelectionSource: function(){
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
+    },
+
+    closeSourceWindow: function(){
+        // TODO to close
     }
 };
