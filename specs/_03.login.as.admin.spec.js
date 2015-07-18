@@ -40,7 +40,7 @@ describe('02. Login as admin@thebodgeitstore.com', function () {
         it('challenge should be done', function(){
             navBar.navToAbout();
             aboutPage.clickScoring();
-            expect(scorePage.isChallenge01Completed()).toBe(common.challenge.completed);
+            expect(scorePage.isChallenge03Completed()).toBe(common.challenge.completed);
         });
 
         it('should logout', function(){
