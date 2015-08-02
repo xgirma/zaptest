@@ -26,5 +26,7 @@ export PATH="/Applications/OWASP ZAP.app/Contents/Java/:$PATH"
 #For Contributors
 
 npm install
+
 npm run ./node_modules/protractor/bin/webdriver-manager update
+
 node ./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update
