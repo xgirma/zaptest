@@ -23,4 +23,8 @@ The "The BodgeIt Store" sample application is used [https://github.com/psiinon/b
 
 export PATH="/Applications/OWASP ZAP.app/Contents/Java/:$PATH"
 
-node ./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update --proxy=http://http
+#For Contributors
+
+npm install
+npm run ./node_modules/protractor/bin/webdriver-manager update
+node ./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update
