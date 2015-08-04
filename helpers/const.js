@@ -25,5 +25,7 @@ module.exports = {
     challenge: {
         completed: 'Completed',
         notCompleted: 'Not completed'
-    }
+    },
+
+    hiddenContent : '<!-- td align="center" width="16%"><a href="admin.jsp">Admin</a></td-->'
 };

@@ -1,4 +1,4 @@
-describe('02. Login as admin@thebodgeitstore.com', function () {
+describe('03. Login as admin@thebodgeitstore.com', function () {
     var homePage,
         loginPage,
         aboutPage,

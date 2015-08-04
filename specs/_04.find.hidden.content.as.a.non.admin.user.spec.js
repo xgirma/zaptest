@@ -3,6 +3,7 @@ describe('04. Find hidden content as a non admin user', function(){
         navBar,
         aboutPage,
         scorePage,
+        sourcePage,
         common;
 
     beforeAll(function(){
@@ -10,6 +11,7 @@ describe('04. Find hidden content as a non admin user', function(){
         navBar = require('../page_objects/common/nav.bar.js');
         aboutPage = require('../page_objects/about.page.js');
         scorePage = require('../page_objects/score.page.js');
+        sourcePage = require('../page_objects/common/source.page.js');
         common = require('../helpers/const.js');
         browser.get(browser.baseUrl + 'home.jsp');
     });
@@ -22,9 +24,17 @@ describe('04. Find hidden content as a non admin user', function(){
         homePage.navToViewSelectionSource();
     });
 
-    // TODO find way to close source window
-    xit('should click on [View Selection Source]', function(){
+    it('should click on [View Selection Source]', function(){
+        var mainWin = browser.getWindowHandle();
         homePage.clickViewSelectionSource();
+
+        var popWin = browser.getWindowHandle();
+        browser.switchTo().window(popWin);
+
+        expect(sourcePage.getHiddenContent()).toContain(common.hiddenContent);
+
+        //TODO: close and switch
+        browser.switchTo().window(mainWin);
     });
 
     it('challenge should not be done', function(){
