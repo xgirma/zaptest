@@ -37,7 +37,7 @@ describe('02. Login as user1@thebodgeitstore.com', function () {
             expect(loginPage.getUsername()).toEqual(common.username.user);
         });
 
-        it('challenge should be done', function(){
+        it('challenge 2 should be completed', function(){
             navBar.navToAbout();
             aboutPage.clickScoring();
             expect(scorePage.isChallenge02Completed()).toBe(common.challenge.completed);

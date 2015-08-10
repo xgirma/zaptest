@@ -37,7 +37,7 @@ describe('04. Find hidden content as a non admin user', function(){
         browser.switchTo().window(mainWin);
     });
 
-    it('challenge should not be done', function(){
+    it('challenge 4 should not be completed', function(){
         navBar.navToAbout();
         aboutPage.clickScoring();
         expect(scorePage.isChallenge04Completed()).toEqual(common.challenge.notCompleted);

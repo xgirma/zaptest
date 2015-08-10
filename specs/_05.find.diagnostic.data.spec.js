@@ -3,6 +3,9 @@ describe('04. Find diagnostic data', function(){
         productPage,
         basketPage,
         basketDebugPage,
+        navBar,
+        aboutPage,
+        scorePage,
         common;
 
     beforeAll(function(){
@@ -10,6 +13,9 @@ describe('04. Find diagnostic data', function(){
         productPage = require('../page_objects/product.page.js');
         basketPage = require('../page_objects/basket.page.js');
         basketDebugPage = require('../page_objects/basket.debug.page.js');
+        navBar = require('../page_objects/common/nav.bar.js');
+        aboutPage = require('../page_objects/about.page.js');
+        scorePage = require('../page_objects/score.page.js');
         common = require('../helpers/const.js');
         browser.get(browser.baseUrl + 'home.jsp');
     });
@@ -35,5 +41,10 @@ describe('04. Find diagnostic data', function(){
         expect(basketDebugPage.getPageTitle()).toEqual(common.error.basketUpdate);
     });
 
-    //TODO challenge should be done using script or innerHTML
+    it('challenge 5 should be completed', function(){
+        browser.get(browser.baseUrl + 'home.jsp');
+        navBar.navToAbout();
+        aboutPage.clickScoring();
+        expect(scorePage.isChallenge05Completed()).toEqual(common.challenge.completed);
+    });
 });

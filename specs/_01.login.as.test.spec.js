@@ -37,7 +37,7 @@ describe('01. Login as test@thebodgeitstore.com', function () {
             expect(loginPage.getUsername()).toEqual(common.username.test);
         });
 
-        it('challenge should be done', function(){
+        it('challenge 1 should be completed', function(){
             navBar.navToAbout();
             aboutPage.clickScoring();
             expect(scorePage.isChallenge01Completed()).toBe(common.challenge.completed);
@@ -66,7 +66,7 @@ describe('01. Login as test@thebodgeitstore.com', function () {
             expect(loginPage.getUsername()).toEqual(common.username.test);
         });
 
-        it('challenge should be done', function(){
+        it('challenge 1 should be completed', function(){
             navBar.navToAbout();
             aboutPage.clickScoring();
             expect(scorePage.isChallenge01Completed()).toBe(common.challenge.completed);

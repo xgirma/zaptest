@@ -37,7 +37,7 @@ describe('03. Login as admin@thebodgeitstore.com', function () {
             expect(loginPage.getUsername()).toEqual(common.username.admin);
         });
 
-        it('challenge should be done', function(){
+        it('challenge 3 should be completed', function(){
             navBar.navToAbout();
             aboutPage.clickScoring();
             expect(scorePage.isChallenge03Completed()).toBe(common.challenge.completed);
