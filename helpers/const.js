@@ -6,7 +6,9 @@ module.exports = {
         login: browser.baseUrl + 'login.jsp',
         logout: browser.baseUrl + 'logout.jsp',
         basket: browser.baseUrl + 'basket.jsp',
-        search: browser.baseUrl + 'search.jsp'
+        search: browser.baseUrl + 'search.jsp',
+        product: browser.baseUrl + 'product.jsp',
+        basket: browser.baseUrl + 'basket.jsp'
     },
 
     sqlInjection: "' or'1'=1",
@@ -27,5 +29,13 @@ module.exports = {
         notCompleted: 'Not completed'
     },
 
-    hiddenContent : '<!-- td align="center" width="16%"><a href="admin.jsp">Admin</a></td-->'
+    hiddenContent : '<!-- td align="center" width="16%"><a href="admin.jsp">Admin</a></td-->',
+
+    script:{
+        qtyChange : "document.getElementById('quantity_26').value = 'a';"
+    },
+
+    error: {
+        basketUpdate : 'HTTP Status 500 - java.lang.NumberFormatException: For input string: "a"'
+    }
 };

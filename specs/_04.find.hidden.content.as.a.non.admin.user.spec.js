@@ -16,7 +16,7 @@ describe('04. Find hidden content as a non admin user', function(){
         browser.get(browser.baseUrl + 'home.jsp');
     });
 
-    it('should right click', function(){
+    it('should right click anywhere in the home page', function(){
         homePage.rightClick();
     });
 
