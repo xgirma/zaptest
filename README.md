@@ -11,8 +11,8 @@ The "The BodgeIt Store" sample application is used [https://github.com/psiinon/b
 |03.  |    Login as admin@thebodgeitstore.com 	                                                        | Yes            |
 |04.  |    Find hidden content as a non admin user 	                                                    | Yes            |
 |05.  |    Find diagnostic data 	                                                                    | Yes            |
-|06.  |    Level 1: Display a popup using: <script>alert("XSS")</script>.                               | Yes            |
-|07.  |    Level 2: Display a popup using: <script>alert("XSS")</script>                                | No            |
+|06.  |    Level 1: Display a popup using: `<script>`alert("XSS")`</script>`.                           | Yes            |
+|07.  |    Level 2: Display a popup using: `<script>`alert("XSS")`</script>`                            | No            |
 |08.  |    Access someone else's basket 	Not implemented/tested yet :(                               | :(            |
 |09.  |    Get the store to owe you money 	                                                            | No            |
 |10.  |    Change your password via a GET request 	                                                    | No            |
