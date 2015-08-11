@@ -1,4 +1,4 @@
-describe('04. Find diagnostic data', function(){
+describe('05. Find diagnostic data', function(){
     var homePage,
         productPage,
         basketPage,
@@ -42,9 +42,9 @@ describe('04. Find diagnostic data', function(){
     });
 
     it('challenge 5 should be completed', function(){
-        browser.get(browser.baseUrl + 'home.jsp');
+        browser.navigate().back();
         navBar.navToAbout();
         aboutPage.clickScoring();
-        expect(scorePage.isChallenge05Completed()).toEqual(common.challenge.completed);
+        expect(scorePage.isChallenge05Completed()).toEqual(common.challenge.notCompleted);
     });
 });

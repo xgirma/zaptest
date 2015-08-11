@@ -66,12 +66,6 @@ describe('01. Login as test@thebodgeitstore.com', function () {
             expect(loginPage.getUsername()).toEqual(common.username.test);
         });
 
-        it('challenge 1 should be completed', function(){
-            navBar.navToAbout();
-            aboutPage.clickScoring();
-            expect(scorePage.isChallenge01Completed()).toBe(common.challenge.completed);
-        });
-
         it('should logout', function(){
             navBar.navToLogout();
             expect(browser.getCurrentUrl()).toEqual(common.url.logout);

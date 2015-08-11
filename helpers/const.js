@@ -32,7 +32,8 @@ module.exports = {
     hiddenContent : '<!-- td align="center" width="16%"><a href="admin.jsp">Admin</a></td-->',
 
     script:{
-        qtyChange : "document.getElementById('quantity_26').value = 'a';"
+        qtyChange : "document.getElementById('quantity_26').value = 'a';",
+        xss : '<script>alert("XSS")</script>'
     },
 
     error: {

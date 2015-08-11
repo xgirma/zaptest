@@ -28,5 +28,9 @@ module.exports = {
 
     isChallenge05Completed: function () {
         return this.webElements.challenge('6');
+    },
+
+    isChallenge06Completed: function () {
+        return this.webElements.challenge('7');
     }
 };
