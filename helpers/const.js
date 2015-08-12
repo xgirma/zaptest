@@ -33,7 +33,8 @@ module.exports = {
 
     script:{
         qtyChange : "document.getElementById('quantity_26').value = 'a';",
-        xss : '<script>alert("XSS")</script>'
+        xss1 : '<script>alert("XSS")</script>',
+        xss2: "<SCRIPT>alert('XSS')</SCRIPT>"
     },
 
     error: {

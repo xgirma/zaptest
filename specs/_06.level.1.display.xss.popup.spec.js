@@ -16,7 +16,7 @@ describe('06. Level 1: Display a popup using XSS', function () {
     });
 
     it('Enter search word with xss', function () {
-        searchPage.enterSearch(common.script.xss);
+        searchPage.enterSearch(common.script.xss1);
     });
 
     it('should display a XSS popup', function () {
