@@ -39,5 +39,10 @@ exports.config = {
         showColors: true,
         includeStackTrace: true,
         defaultTimeoutInterval: 30000
+    },
+
+    params:{
+        host: 'localhost',
+        port: '8080'
     }
 };
