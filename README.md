@@ -1,8 +1,8 @@
-## ZAProxy: Using Protractor to identify Web Applications vulnerabilities
+##Using Protractor and OWASP ZAP to solve the bodgeit store security challenges.
 
 The "The BodgeIt Store" sample application is used [https://github.com/psiinon/bodgeit.git]([https://github.com/psiinon/bodgeit.git])
 
-# Challenges completed using this automation
+### Challenges completed using this automation
 
 |No   |    Challenge                                                                                    |  Completed    |
 |-----|-------------------------------------------------------------------------------------------------|---------------|
