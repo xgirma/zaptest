@@ -1,11 +1,11 @@
 module.exports = {
     webElements: {
-        lblPageTitle: function(){
+        lblPageTitle: function () {
             return element(by.xpath("html/body/h1"));
         }
     },
 
-    getPageTitle : function(){
+    getPageTitle: function () {
         return this.webElements.lblPageTitle().getText();
     }
 };

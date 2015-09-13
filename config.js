@@ -1,12 +1,10 @@
 exports.config = {
 
     specs: [
-        '../specs/*.spec.js'
+        './specs/*.spec.js'
     ],
 
-    exclude: [
-        '../specs/nav.spec.js'
-    ],
+    exclude: [],
 
     capabilities: {
         browserName: 'firefox',
@@ -28,8 +26,11 @@ exports.config = {
         browser.ignoreSynchronization = true;
 
         var SpecReporter = require('jasmine-spec-reporter');
-        jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
-
+        jasmine.getEnv().addReporter(new SpecReporter({
+            displayStacktrace: true,
+            displaySpecDuration: true,
+            displaySuiteNumber: true
+        }));
     },
 
     framework: 'jasmine2',
@@ -38,7 +39,8 @@ exports.config = {
         isVerbose: true,
         showColors: true,
         includeStackTrace: true,
-        defaultTimeoutInterval: 30000
+        defaultTimeoutInterval: 30000,
+        print: function() {}
     },
 
     params:{

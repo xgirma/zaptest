@@ -4,7 +4,8 @@
   "description": "testing zap with protractor",
   "main": "index.js",
   "scripts": {
-    "test": "TODO"
+    "update-webdriver": "node ./node_modules/protractor/bin/webdriver-manager update",
+    "test": "protractor config.js"
   },
   "repository": {
     "type": "git",
@@ -20,13 +21,13 @@
     "url": "https://github.com/xgirma/zaptest/issues"
   },
   "homepage": "https://github.com/xgirma/zaptest#readme",
-  "devDependencies": {
+  "dependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-protractor-runner": "^2.0.0",
-    "grunt-zaproxy": "^0.1.3",
+    "grunt-zaproxy": "^0.1.5",
     "jasmine-spec-reporter": "^2.1.0",
-    "protractor": "^1.7.0",
+    "protractor": "^2.2.0",
     "zaproxy": "^0.2.0"
   }
 }

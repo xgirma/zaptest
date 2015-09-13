@@ -1,50 +1,30 @@
-describe('05. Find diagnostic data', function(){
-    var homePage,
-        productPage,
-        basketPage,
-        basketDebugPage,
-        navBar,
-        aboutPage,
-        scorePage,
-        common;
+var homePage = require('../page_objects/home.page.js'),
+    productPage = require('../page_objects/product.page.js'),
+    basketDebugPage = require('../page_objects/basket.debug.page.js'),
+    data = require('../helpers/data.json');
 
-    beforeAll(function(){
-        homePage = require('../page_objects/home.page.js');
-        productPage = require('../page_objects/product.page.js');
-        basketPage = require('../page_objects/basket.page.js');
-        basketDebugPage = require('../page_objects/basket.debug.page.js');
-        navBar = require('../page_objects/common/nav.bar.js');
-        aboutPage = require('../page_objects/about.page.js');
-        scorePage = require('../page_objects/score.page.js');
-        common = require('../helpers/const.js');
+describe('Find diagnostic data', function () {
+    beforeAll(function () {
         browser.get(browser.baseUrl + 'home.jsp');
     });
 
-    it('click on [zip a dee doo dah] should redirect to products page', function(){
+    it('click on doodahs should reveal type id', function () {
         homePage.clickDoodahs();
-        expect(browser.getCurrentUrl()).toEqual(common.url.product + '?typeid=6');
+        expect(browser.getCurrentUrl()).toContain(data.url.product + data.url.type_id);
     });
 
-    it('click on [add to basket] should redirect to basket page', function(){
+    it('click on zip a dee doo dah add should reveal product', function () {
         productPage.clickZipADeeDooDah();
+        expect(browser.getCurrentUrl()).toContain(data.url.product + data.url.prod_id);
+    });
+
+    it('should change quantity to [a]', function () {
+        browser.executeScript(data.script.qtyChange);
+        expect(productPage.getZipADeeDooDahQty()).toEqual('a');
+    });
+
+    it('click [add to basket] should display debug message', function () {
         productPage.clickAddToBasket();
-        expect(browser.getCurrentUrl()).toEqual(common.url.basket);
-    });
-
-    it('should change quantity to [a]', function(){
-        browser.executeScript(common.script.qtyChange);
-        expect(basketPage.getZipADeeDooDahQty()).toEqual('a');
-    });
-
-    it('click [update basket] should display debug message', function(){
-        basketPage.clickUpdateBasket();
-        expect(basketDebugPage.getPageTitle()).toEqual(common.error.basketUpdate);
-    });
-
-    it('challenge 5 should be completed', function(){
-        browser.navigate().back();
-        navBar.navToAbout();
-        aboutPage.clickScoring();
-        expect(scorePage.isChallenge05Completed()).toEqual(common.challenge.notCompleted);
+        expect(basketDebugPage.getPageTitle()).toEqual(data.add_basket_err);
     });
 });

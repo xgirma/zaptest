@@ -1,5 +1,4 @@
-/* global element, by */
-'use strict';
+var data = require('../helpers/data.json');
 
 module.exports = {
 
@@ -29,24 +28,34 @@ module.exports = {
         var el = this.webElements.txtUsername();
         el.clear();
 
-        switch(name) {
-            case 'test' || 'test@thebodgeitstore.com':
-                el.sendKeys("test@thebodgeitstore.com' or '1'='1");
-                break;
-            case 'test@thebodgeitstore.com':
-                el.sendKeys("test@thebodgeitstore.com");
+        switch (name) {
+            case 'test':
+                el.sendKeys(data.user_name.test);
                 break;
             case 'user1':
-                el.sendKeys("user1@thebodgeitstore.com' or '1'='1");
-                break;
-            case 'user1@thebodgeitstore.com':
-                el.sendKeys("user1@thebodgeitstore.com");
-                break;
-            case 'admin@thebodgeitstore.com':
-                el.sendKeys("admin@thebodgeitstore.com");
+                el.sendKeys(data.user_name.user1);
                 break;
             default:
-                el.sendKeys("admin@thebodgeitstore.com' or '1'='1");
+                el.sendKeys(data.user_name.admin);
+                break;
+        }
+    },
+
+    // enters SQL injection name use name
+    enterSQLInjection: function (name) {
+        var el = this.webElements.txtUsername();
+        el.clear();
+
+        switch (name) {
+            case 'test':
+                el.sendKeys(data.sql_injection.test);
+                break;
+            case 'user1':
+                el.sendKeys(data.sql_injection.user1);
+                break;
+            default:
+                el.sendKeys(data.sql_injection.admin);
+                break;
         }
     },
 

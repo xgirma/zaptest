@@ -1,22 +1,19 @@
-// Level 2: Display a popup using: <script>alert("XSS")</script>
-describe('07. Level 1: Display a popup using XSS', function(){
-    var contactPage,
-        common;
+describe('\Level 2: Display a popup using: <script>alert("XSS")</script>', function () {
+    var contactPage = require('../page_objects/contact.us.page.js'),
+        utils = require('../helpers/utilities.js'),
+        data = require('../helpers/data.json');
 
-    beforeAll(function(){
-        contactPage = require('../page_objects/contact.us.page.js');
-        common = require('../helpers/const.js');
+    beforeAll(function () {
         browser.get(browser.baseUrl + 'contact.jsp');
     });
 
-    it('Enter search word with xss', function(){
-        contactPage.enterComment(common.script.xss2);
+    it('enter search word with xss', function () {
+        contactPage.enterComment(data.script.xss2);
     });
 
-    it('should display a XSS popup', function(){
+    it('should display a XSS popup', function () {
         contactPage.clickSubmit();
-        var alertDialog = browser.switchTo().alert();
-        expect(alertDialog.getText()).toEqual("XSS");
-        browser.switchTo().alert().dismiss();
+        expect(utils.alertTxt()).toEqual("XSS");
+        browser.sleep(4000);
     });
 });

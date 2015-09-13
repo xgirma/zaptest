@@ -1,0 +1,44 @@
+{
+  "user_type":{
+    "test": "test",
+    "user1": "user1",
+    "admin": "admin"
+  },
+
+  "user_name": {
+    "test": "test@thebodgeitstore.com",
+    "user1": "user1@thebodgeitstore.com",
+    "admin": "admin@thebodgeitstore.com"
+  },
+
+  "sql_injection":{
+    "test": "test@thebodgeitstore.com' or '1'='1",
+    "user1": "user1@thebodgeitstore.com' or '1'='1",
+    "admin": "admin@thebodgeitstore.com' or '1'='1"
+  },
+
+  "password":{
+    "guess": "password",
+    "whatever": "whatever"
+  },
+
+  "url":{
+    "logout": "logout.jsp",
+    "admin": "admin.jsp",
+    "product": "product.jsp",
+    "type_id": "?typeid=",
+    "prod_id": "?prodid=",
+    "passGet": "http://localhost:8080/bodgeit/password.jsp?password1=newpass&password2=newpass"
+  },
+
+  "hiddenContent": "<!-- td align=\"center\" width=\"16%\"><a href=\"admin.jsp\">Admin</a></td-->",
+
+  "script": {
+    "qtyChange": "document.getElementById('quantity').value = 'a';",
+    "xss1": "<script>alert(\"XSS\")</script>",
+    "xss2": "<SCRIPT>alert('XSS')</SCRIPT>"
+  },
+
+  "add_basket_err": "HTTP Status 500 - java.lang.NumberFormatException: For input string: \"a\"",
+  "successPassChange": "Your password has been changed"
+}
