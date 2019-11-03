@@ -27,7 +27,7 @@
     "grunt-protractor-runner": "^2.0.0",
     "grunt-zaproxy": "^0.1.5",
     "jasmine-spec-reporter": "^2.1.0",
-    "protractor": "^2.2.0",
+    "protractor": "^5.0.0",
     "zaproxy": "^0.3.0"
   }
 }
