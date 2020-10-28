@@ -26,7 +26,7 @@
     "grunt-cli": "^0.1.13",
     "grunt-protractor-runner": "^2.0.0",
     "grunt-zaproxy": "^0.1.5",
-    "jasmine-spec-reporter": "^2.1.0",
+    "jasmine-spec-reporter": "^6.0.0",
     "protractor": "^2.2.0",
     "zaproxy": "^0.3.0"
   }
